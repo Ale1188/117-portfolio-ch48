@@ -29,37 +29,95 @@
 
 /* Project Section */
 .projects-section {
-    border: solid red 2px;
     margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .projects-list {
-    border: solid blue 2px;
-    margin: 2rem 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem 0;
 }
 
 .project-card {
-    width: 25rem;
+    width: 30rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--neutral-color);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     display: flex;
-    flex-wrap: wrap;
-    padding: 0.5rem;
-    background-color: darkgray;
+    flex-direction: column;
+    align-items: center;
 }
 
-.project-card img{
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+    border: solid 1px var(--primary-color);
+    opacity: 1;
+}
+
+.project-card img {
     width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 1rem;
 }
 
 .project-skills {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.5rem;
+    margin-top: 1rem;
 }
 
+.project-skills span {
+    background-color: var(--primary-color-light);
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+
+a p:nth-child(2) {
+    font-size: 1.5rem;
+    color: var(--secondary-color-600);
+    font-weight: bolder;
+    margin: 0.5rem 0px;
+}
+
+a p:nth-child(3) {
+    font-style: italic;
+    color: var(--secondary-color-900);
+    text-align: justify;
+}
+
+a p:nth-child(4) {
+    margin: 0.5rem 0px;
+    font-weight: bolder;
+    font-style: italic;
+    letter-spacing: 0.5rem;
+}
+
+
+/* Hover animation for skills */
+.project-skills span:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.1);
+}
 
 /* Experience Section */
 .experience-section {
     margin-top: 4rem;
+}
+
+.experience-list {
+    margin: 2rem 0px;
 }
 
 .experience-card {
@@ -70,9 +128,33 @@
     margin: 2rem 0px;
 }
 
+.experience-card:hover {
+    opacity: 0.5;
+    border: solid 1px var(--primary-color);
+}
+
+.experience-card image {
+    width: 100%;
+}
+
 .experience-skills {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     margin: 1rem 0px;
+}
+
+.experience-card p:nth-child(2) {
+    font-size: 1.5rem;
+    color: pink;
+    font-size: italic;
+    font-weight: bolder;
+}
+
+.experience-card p:nth-child(3) {
+    font-style: normal;
+}
+
+.experience-card p:nth-child(4) {
+    font-style: italic;
 }

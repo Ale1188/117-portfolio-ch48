@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %} project list {% endblock title %}
+{% load static %}
+
+{% block content %}
+
+<section class="projects-section center-column">
+    <h2>Projects</h2>
+
+    <div>
+        <a href="htts://github.com/" target="_blank">
+            <img src="{% static './img/logo.png' %}" alt="">
+            <p>Project 1 Name</p>
+            <p>This a short description for project 1</p>
+            <p>YYYY</p>
+            <div class="project-skills">
+                <label for="text-label">Skills 1</label>
+                <label for="text-label">Skills 2</label>
+                <label for="text-label">Skills 3</label>
+                <label for="text-label">Skills 4</label>
+                <label for="text-label">Skills 5</label>
+            </div>
+        </a>
+    </div>
+</section>
+
+
+{% endblock content %}

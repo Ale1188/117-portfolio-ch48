@@ -38,13 +38,14 @@
 .projects-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
     justify-content: center;
     margin: 2rem 0;
+    gap: 1rem;
 }
 
 .project-card {
-    width: 30rem;
+    height: 600px;
+    width: 20rem;
     padding: 1rem;
     border-radius: 10px;
     background-color: var(--neutral-color);
@@ -53,10 +54,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 
 .project-card:hover {
-    transform: scale(1.05);
     box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
     border: solid 1px var(--primary-color);
     opacity: 1;
@@ -70,10 +71,11 @@
 }
 
 .project-skills {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-top: 1rem;
+    margin-top: 0.2rem;
 }
 
 .project-skills span {
@@ -84,7 +86,7 @@
     font-weight: bold;
 }
 
-a p:nth-child(2) {
+a p:nth-child(2), .experience-card p:nth-child(2) {
     font-size: 1.5rem;
     color: var(--secondary-color-600);
     font-weight: bolder;
@@ -97,18 +99,12 @@ a p:nth-child(3) {
     text-align: justify;
 }
 
-a p:nth-child(4) {
+a p:nth-child(4), .experience-card p:nth-child(4) {
     margin: 0.5rem 0px;
+    color: var(--surface-color);
     font-weight: bolder;
     font-style: italic;
     letter-spacing: 0.5rem;
-}
-
-
-/* Hover animation for skills */
-.project-skills span:hover {
-    background-color: var(--primary-color);
-    transform: scale(1.1);
 }
 
 /* Experience Section */
@@ -126,15 +122,13 @@ a p:nth-child(4) {
     flex-wrap: wrap;
     padding: 1rem;
     margin: 2rem 0px;
+    flex-direction: column;
+    align-items: baseline;
 }
 
 .experience-card:hover {
     opacity: 0.5;
     border: solid 1px var(--primary-color);
-}
-
-.experience-card image {
-    width: 100%;
 }
 
 .experience-skills {
@@ -144,7 +138,7 @@ a p:nth-child(4) {
     margin: 1rem 0px;
 }
 
-.experience-card p:nth-child(2) {
+.experience-card p:nth-child(1) {
     font-size: 1.5rem;
     color: pink;
     font-size: italic;
@@ -157,4 +151,33 @@ a p:nth-child(4) {
 
 .experience-card p:nth-child(4) {
     font-style: italic;
+    color: var(--neutral-color);
+}
+
+/* Contact Section */
+.contact-section #emailForm {
+    border: solid 1px var(--primary-color-100);
+    border-radius: 4px;
+    padding: 1rem 2.5rem 2.5rem;
+    margin-top: 2.5rem;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.contact-section p {
+    margin-bottom: 1rem;
+}
+
+.contact-section h2 {
+    margin-bottom: 1rem;
+}
+
+.contact-section h2 span {
+    color: var(--neutral-color);
+    font-family: inherit;
 }

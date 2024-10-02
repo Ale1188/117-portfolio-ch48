@@ -5,27 +5,33 @@
 
 {% block content %}
 
-<section class="experience_section center-column">
-    <h1>Experience</h1>
+<section class="experience-section center-column">
+    <h2>Experience</h2>
 
     <div class="experience_list">
-        <div class="experience-card">
+        {% for experience in experience %}
+            <div class="experience-card">
 
 
-            <p>Name or the school or company</p>
-            <p>Course name or job position</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit iste sunt dolorem fuga maxime laborum cum soluta excepturi exercitationem tempora.</p>
-            <p>Month YYYY - Month YYYY</p>
-            
-            <div class="experience-skills">
-                <label class="text-label">Skills 1</label>
-                <label class="text-label">Skills 2</label>
-                <label class="text-label">Skills 3</label>
-                <label class="text-label">Skills 4</label>
+                    <p>{{ experience.name }}</p>
+                    <p>{{ experience.title }}</p>
+                    <p>{{ experience.description }}</p>
+                    <p>{{ experience.start_month }} / {{ experience.start_year }} - {{ experience.end_month }} / {{ experience.end_year }}</p>
+                    
+                    <div class="experience-skills">
+
+                        {% for skill in experience.skills.all %}
+
+                            <label class="text-label">{{ skill.name }}</label>
+
+                        {% endfor %}  
+
+                    </div>
+
             </div>
 
-        </div>
-
+        {% endfor %}
+        
     </div>
 </section>
 

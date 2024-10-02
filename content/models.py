@@ -17,3 +17,19 @@ class Project(models.Model):
 
     def __str__(self):
         return f"{self.name} - ({self.year})"
+    
+class Experience(models.Model):
+    name = models.CharField(max_length=100)
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+
+    start_month = models.IntegerField()
+    start_year = models.IntegerField()
+
+    end_month = models.IntegerField(null=True, blank=True)
+    end_year = models.IntegerField(null=True, blank=True)
+
+    skills = models.ManyToManyField(Skill)
+
+    def __str__(self):
+        return f"{self.name}"
